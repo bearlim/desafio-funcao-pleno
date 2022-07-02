@@ -18,7 +18,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="Sobrenome">CPF:</label>
-                <input required="required" type="text" class="form-control" id="CPF" name="CPF" placeholder="Ex.: 010.011.111-00" maxlength="14">
+                <input required="required" type="text" class="form-control CPFMask" id="CPF" name="CPF" placeholder="Ex.: 010.011.111-00" maxlength="14">
             </div>
         </div>
         <div class="col-md-6">
@@ -33,7 +33,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="CEP">CEP:</label>
-                <input required="required" type="text" class="form-control" id="CEP" name="CEP" placeholder="Ex.: 01011-100" maxlength="9">
+                <input required="required" type="text" class="form-control CEPMask" id="CEP" name="CEP" placeholder="Ex.: 01011-100" maxlength="9">
             </div>
         </div>
         <div class="col-md-4">
@@ -73,7 +73,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="Telefone">Telefone:</label>
-                <input required="required" type="tel" class="form-control" id="Telefone" name="Telefone" placeholder="Ex.: (11) 2020-3030" maxlength="15">
+                <input required="required" type="tel" class="form-control TelefoneMask" id="Telefone" name="Telefone" placeholder="Ex.: (11) 2020-3030" maxlength="15">
             </div>
         </div>
     </div>
@@ -95,3 +95,62 @@
         </div>
     </div>
 </form>
+
+
+<div class="modal fade" id="modalBeneficiario" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title" id="TitleBeneficiario">Beneficiários</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <form id="formBeneficiario" onsubmit="return false">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="NomeBeneficiario">Nome *</label>
+                                <input required="required" type="text" class="form-control" id="NomeBeneficiario" name="NomeBeneficiario" placeholder="Ex.: Yuri Pereira">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="CPFBeneficiario">CPF *</label>
+                                <input required="required" type="text" class="form-control CPFMask" id="CPFBeneficiario" name="CPFBeneficiario" placeholder="Ex.: XXX.XXX.XXX-XX">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="Email">	&#8194;</label>
+                            <button class="btn btn-success" type="submit" id="Email">Incluir</button>
+                        </div>
+                    </form>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table" id="gridBeneficiarios">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width:40%">CPF</th>
+                                    <th scope="col" style="width:40%">Nome</th>
+                                    <th style="width:10%"></th>
+                                    <th style="width:10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @*<tr>
+                                    <td>asdasdsa</td>
+                                    <td>asdasdsa</td>
+                                    <td><button class="btn btn-primary" type="button" id="btAlterar">Alterar</button></td>
+                                    <td><button class="btn btn-danger" type="button" id="btExcluir">Excluir</button></td>
+                                </tr>*@
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

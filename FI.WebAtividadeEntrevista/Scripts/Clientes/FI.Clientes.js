@@ -57,3 +57,59 @@ function ModalDialog(titulo, texto) {
     $('body').append(texto);
     $('#' + random).modal('show');
 }
+
+// Evento para iniciar o modal em inserção
+$("#btBeneficiarios").click(() => {
+    $("#modalBeneficiario").modal("show");
+    MontarListagem();
+});
+
+// Evento de envio de dados de beneficiário
+$("#formBeneficiario").submit(function () {
+    var arrBen = localStorage.getItem("arrBen"),
+        form = $(this);
+
+    if (!!arrBen) {
+        arrBen = JSON.parse(arrBen);
+        arrBen.push({
+            NOME: $(form).find("#NomeBeneficiario").val(),
+            CPF: $(form).find("#CPFBeneficiario").va()
+        });
+
+        localStorage.setItem("arrBen", JSON.stringify(arrBen));
+        form[0].reset();
+        MontarListagem();
+    } else {
+        var obj =
+            [
+                {
+                    NOME: $(form).find("#NomeBeneficiario").val(),
+                    CPF: $(form).find("#CPFBeneficiario").val()
+                }
+            ]
+
+        localStorage.setItem("arrBen", JSON.stringify(obj));
+        form[0].reset();
+        MontarListagem();
+    }
+});
+
+function MontarListagem() {
+    var arrObj = JSON.parse(localStorage.getItem("arrBen")),
+        html = "";
+
+    $("#modalBeneficiario #gridBeneficiarios #tableData tr").remove();
+
+    if (!!arrObj) {
+        arrObj.map((e, index) => {
+            html += `<tr>`
+            html += `<td>${e.CPF}</td>`;
+            html += `<td>${e.NOME}</td>`;
+            html += `<td><button class='btn btn-primary' type='button' id='Email' data-index='${index}'> Alterar </button></td>`;
+            html += `<td><button class='btn btn-danger' type='button' id='btExcluir'> Excluir </button></td>`;
+            html += `</tr>`;
+        });
+
+        $("#modalBeneficiario table tbody:last-child").append(html);
+    }
+}

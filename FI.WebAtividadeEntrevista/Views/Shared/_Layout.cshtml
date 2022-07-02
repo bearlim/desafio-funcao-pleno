@@ -43,7 +43,9 @@
     @Scripts.Render("~/bundles/inputmask")
     @RenderSection("scripts", required: false)
     <script>
-        $("#formCadastro #CPF").mask("000.000.000-00");
+        $(".CPFMask").mask("000.000.000-00");
+        $(".CEPMask").mask("00.000-00");
+        $(".TelefoneMask").mask("(00) 0 0000-0000");
     </script>
 </body>
 </html>
