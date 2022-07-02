@@ -36,8 +36,7 @@ namespace FI.AtividadeEntrevista.DAL
             Output.Direction = ParameterDirection.Output;
             parametros.Add(Output);
 
-            int output = 0;
-            DataSet ds = base.ConsultarV2("FI_SP_IncClienteV2", parametros, out output);
+            DataSet ds = base.ConsultarV2("FI_SP_IncClienteV2", parametros, out int output);
 
             if (output == -1)
                 throw new Exception("NÃO FOI POSSÍVEL SALVAR CLIENTE. CPF JÁ CADASTRADO");

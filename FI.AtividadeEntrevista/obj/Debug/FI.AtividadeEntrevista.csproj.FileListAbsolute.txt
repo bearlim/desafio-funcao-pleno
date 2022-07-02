@@ -22,3 +22,9 @@ C:\Users\brutc\Downloads\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\FI.
 C:\Users\brutc\Downloads\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.dll
 C:\Users\brutc\Downloads\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.pdb
 C:\Users\brutc\Downloads\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csproj.AssemblyReference.cache
+C:\Users\brutc\Documents\desafio-funcao-pleno\FI.AtividadeEntrevista\bin\Debug\FI.AtividadeEntrevista.dll
+C:\Users\brutc\Documents\desafio-funcao-pleno\FI.AtividadeEntrevista\bin\Debug\FI.AtividadeEntrevista.pdb
+C:\Users\brutc\Documents\desafio-funcao-pleno\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csproj.AssemblyReference.cache
+C:\Users\brutc\Documents\desafio-funcao-pleno\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csproj.CoreCompileInputs.cache
+C:\Users\brutc\Documents\desafio-funcao-pleno\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.dll
+C:\Users\brutc\Documents\desafio-funcao-pleno\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.pdb
