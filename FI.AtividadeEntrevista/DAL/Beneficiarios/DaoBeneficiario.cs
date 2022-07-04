@@ -12,6 +12,9 @@ namespace FI.AtividadeEntrevista.DAL
     {
         internal void Incluir(List<DML.Beneficiario> beneficiarios, long IdCliente)
         {
+            if(beneficiarios == null)
+                return;
+
             beneficiarios.ForEach(beneficiario =>
             {
                 List<SqlParameter> parameters = new List<SqlParameter>();
