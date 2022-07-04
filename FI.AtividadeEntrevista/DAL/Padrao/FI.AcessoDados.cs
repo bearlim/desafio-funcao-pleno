@@ -93,7 +93,7 @@ namespace FI.AtividadeEntrevista.DAL
             try
             {
                 adapter.Fill(ds);
-                if(comando.Parameters["RETORNO"].Value.GetType().GetProperties().Count() != 0)
+                if(comando.Parameters["RETORNO"].Value.GetType().GetProperties().Count() != 0 || comando.Parameters["RETORNO"].Value != null)
                     OutputValue = (Int32)comando.Parameters["RETORNO"].Value;
                 else 
                     OutputValue = 1;

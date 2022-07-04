@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using FI.AtividadeEntrevista.DML;
 
 namespace WebAtividadeEntrevista.Models
 {
@@ -72,6 +73,11 @@ namespace WebAtividadeEntrevista.Models
         /// </summary>
         [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "Digite um CPF válido")]
         public string CPF { get; set; }
+
+        /// <summary>
+        /// Beneficiários
+        /// </summary>
+        public List<Beneficiario> Beneficiarios { get; set; }
 
     }    
 }

@@ -1,5 +1,5 @@
 ﻿
-<form id="formCadastro" method="post">
+<form id="formCadastro" onsubmit="return false">
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
@@ -108,6 +108,9 @@
                 <div class="row">
 
                     <form id="formBeneficiario" onsubmit="return false">
+
+                        <input type="hidden" name="IdCliente" id="IdCliente" />
+
                         <div class="col-md-5">
                             <div class="form-group">
                                 <label for="NomeBeneficiario">Nome *</label>
@@ -140,15 +143,48 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @*<tr>
-                                    <td>asdasdsa</td>
-                                    <td>asdasdsa</td>
-                                    <td><button class="btn btn-primary" type="button" id="btAlterar">Alterar</button></td>
-                                    <td><button class="btn btn-danger" type="button" id="btExcluir">Excluir</button></td>
-                                </tr>*@
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalEditarBeneficiario" role="dialog" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title" id="TitleBeneficiario">Editar Beneficiário</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <form id="formEditarBeneficiario" onsubmit="return false">
+
+                        <input type="hidden" id="indexInput" />
+                        <input type="hidden" id="IdBeneficiario" />
+
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="NomeBeneficiario">Nome *</label>
+                                <input required="required" type="text" class="form-control" id="NomeBeneficiario" name="NomeBeneficiario" placeholder="Ex.: Yuri Pereira">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="CPFBeneficiario">CPF *</label>
+                                <input required="required" type="text" class="form-control CPFMask" id="CPFBeneficiario" name="CPFBeneficiario" placeholder="Ex.: XXX.XXX.XXX-XX">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="Email">	&#8194;</label>
+                            <button class="btn btn-success" type="submit" id="Email">Editar</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>

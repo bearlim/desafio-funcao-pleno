@@ -10,8 +10,9 @@ namespace WebAtividadeEntrevista.Models
     {
         public int Id { get; set; }
         [Required]
-        public int CPF { get; set; }
+        public string CPF { get; set; }
         [Required]
         public string NOME { get; set; }
+        public int IdCliente { get; set; }
     }
 }

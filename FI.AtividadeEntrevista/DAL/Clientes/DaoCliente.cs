@@ -39,7 +39,7 @@ namespace FI.AtividadeEntrevista.DAL
             DataSet ds = base.ConsultarV2("FI_SP_IncClienteV2", parametros, out int output);
 
             if (output == -1)
-                throw new Exception("NÃO FOI POSSÍVEL SALVAR CLIENTE. CPF JÁ CADASTRADO");
+                throw new Exception("Não foi possível salvar o cliente. CPF já cadastrado");
 
             long ret = 0;
             if (ds.Tables[0].Rows.Count > 0)
